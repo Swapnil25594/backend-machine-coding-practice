@@ -1,0 +1,36 @@
+Enabling efficient search in online is very crucial for enabling the customer to find the product from a huge set of product collection. Finding relevant product is crucial for increasing hit ratio of the search.
+ 
+Given a list of products(with id and Name attributes) as below , when a customer searches for the product by entering Keywords, then as search result, list the products that contain all the keyword words in the search string. The keyword match need not be in the same order as in the search string.
+ 
+Amul -> Milk (isWord=true)
+
+
+Example:
+Products : [
+{1, “Amul milk”},
+{2, “Nandini Chocolate Milk”},
+{3, “Milk Chocolate”},
+{4, “Chocolate Milk”},
+{5, "Milky Way Chocolate Bar"}]
+return all the products [id and name] that contain that search string.
+For example search for “Milk” should return :
+Products : [
+{1, “Amul milk”},
+{2, “Nandini Chocolate Milk”},
+{3, “Milk Chocolate”}, {4, “Chocolate Milk”}]
+Similarly, search for “Chocolate Milk” : [
+{2, “Nandini Chocolate Milk”},
+{3, “Milk Chocolate”},
+{4, “Chocolate Milk”}]
+ 
+As an extension to the previous problem, Rank the search results based on the character count match percentage.
+For example search for “Chocolate Milk” should return : [
+{4, “Chocolate Milk”, score:100} ,
+{3, “Milk Chocolate”, score:100} ,
+{2, “Nandini Chocolate Milk”, score:63} ]
+example search for “Milk” should return : [
+{1, “Amul milk”, score:44},
+{4, “Chocolate Milk”, score:28} ,
+{3, “Milk Chocolate”, score:28} ,
+{2,“Nandini Chocolate Milk”, score:18} ]
+ 
